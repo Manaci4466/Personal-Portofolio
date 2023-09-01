@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@1,200&display=swap');
+/* default reset*/ 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --maintext-color: #FFF;
+    --subtext-color: #5B8266;
+    --mainBG-color: #1B1B1B;
+    --subBG-color: #2272FF;
+    --normFont-size: 1.25rem;
+    --BgFont-size: 2.5rem;
+    --extraBgFont-size: 5rem;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background: #1D1D1D;
+    background-image: url('../assets/background/output-onlinepngtools.png');
+    background-blend-mode: overlay;
+    background-size: contain;
+    background-position: top;
+}
+
+header {
+    top: 0;
+    width: 100vw;
+    position: fixed;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--maintext-color);
+    background: #2b2b2bd2;
+    box-shadow: 2px 1px 12px 3px rgba(34,114,255,0.74);
+}
+
+svg {
+    position: relative;
+    top: 5px;
+    width: 28px;
+    height: 28px;
+  
+}
+
+nav {
+
+    padding: 5px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #5B8266;
+    font-size: var(--normFont-size);
+    font-weight: 600;
+    text-align: center;
+}
+
+img {
+
+    border-radius: 10px;
+
+}
+
+a:focus {
+
+    color: white;
+
+}
+
+a:visited{
+
+    color: white;
+}
+
+a:active{
+
+    color: #FEC601;
+}
+
+button {
+
+    border: none;
+    background: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1,h2,h3,h4 {
+    color: var(--maintext-color);
+}
+
+p{
+
+    color: var(--subtext-color);
+    font-weight: 600;
+}
+
+span {
+    color: var(--maintext-color);
+    font-weight: 600;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 500ms ease-in ;
+}
+
+.anim {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.shiftright {
+    opacity: 0;
+    transition: all 1000ms ease-in ;
+}
+
+.shiftleft {
+    opacity: 0;
+    transition: all 1000ms ease-in ;
+
+}
+
+.shift {
+    opacity: 1;
+}
+
+header div h1 {
+    font-size: var(--BgFont-size);
+}
+
+nav ul li {
+    display:  inline-block;
+    padding: 10px;
+}
+
+
+nav li {
+    transition: transform 100ms ease-in 50ms;
+}
+
+nav svg {
+    display: none;
+}
+
+nav li:hover {
+    transform: scale(1.2);
+}
+
+nav ul li {
+    display:  inline-block;
+    padding: 10px;
+}
+
+section {
+
+    margin-top: 50px;
+
+}
+
+/**INTRO section****/
+section.introduction {
+    min-height: 70vh;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    margin-top: 25vh;
+}
+
+section.introduction section {
+    display: flex;
+    flex-flow: column wrap;
+ }
+
+section.introduction section .dream {
+    align-self: flex-end;
+    text-align: center;
+} 
+
+section.introduction section div:first-child {
+    padding: 10px;
+    font-size: var(--BgFont-size);
+    margin-bottom: -2rem;
+}
+
+section.introduction section div:last-child {
+    padding: 10px;
+    font-size: var(--extraBgFont-size);
+}
+
+/**ABOUT section****/
+section.about {
+    display: flex;
+    justify-content: center;
+    padding: 0px 10vw;
+    min-height: 60vh;
+    margin-bottom: 20vh;
+}
+
+
+section.about section > div {
+    display:flex;
+    flex-flow: row nowrap;
+    column-gap: 1rem;
+}
+
+
+section.about section div h2 {
+    font-size: var(--BgFont-size);
+}
+
+section.about section aside {
+    font-size: calc(var(--normFont-size) + 0.25rem);
+    
+}
+
+section.about section figure img{
+    height: 100%;
+    width: 600px;
+    object-fit: contain;
+}
+
+/**WORK section****/
+main.work {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main.work h2 {
+    font-size: var(--extraBgFont-size);
+}
+
+main.work > section {
+    display: grid;
+    grid-template-columns: repeat(2,40vw);
+    grid-template-rows: repeat(3,minmax(200px,700px));
+    grid-auto-flow: row;
+    column-gap: 2rem;
+}
+
+main.work section section.upper {
+    display: flex;
+    align-items: flex-start;
+}
+
+main.work section section.lower {
+    display: flex;
+    align-items: flex-end;
+}
+
+main.work section section > div {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1rem;
+}
+
+main.work section section div aside{
+    font-size: var(--normFont-size);
+}
+
+main.work section section div aside .languages {
+   display: flex;
+   gap: 60%;
+   flex-flow: row nowrap;
+}
+
+main.work section section div aside .languages p{
+    color: white;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+
+main.work section section div aside h3{
+    font-size: var(--BgFont-size);
+}
+
+main.work section section div aside .links {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 10%;
+}
+
+main.work section section div figure img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+/**CONTACT section****/
+section.contact{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 80vh; 
+}
+
+section.contact section {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.contact section div h2 {
+    font-size: var(--extraBgFont-size);
+    color: var(--maintext-color);
+}
+
+section.contact section div p {
+    font-size: var(--BgFont-size);
+    color: var(--maintext-color);
+}
+
+section.contact section div p a {
+    color: var(--maintext-color);
+}
+
+section.contact footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section.contact footer div {
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+section.contact footer ul li {
+    padding: 5px;
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+    main.work > section {
+        display: grid;
+        grid-template-columns: repeat(1,80vw);
+        grid-template-rows: repeat(6,minmax(200px,700px));
+        grid-auto-flow: row;
+        column-gap: 2rem;
+    }
+
+    :root {
+        --maintext-color: #FFF;
+        --subtext-color: #5B8266;
+        --mainBG-color: #1B1B1B;
+        --subBG-color: #2272FF;
+        --normFont-size: 1rem;
+        --BgFont-size: 2rem;
+        --extraBgFont-size: 3.5rem;
+
+    }
+
+    main.work section section.upper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    main.work section section.lower {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.about section > div {
+        display:flex;
+        flex-flow: column-reverse nowrap;
+        column-gap: 0.5rem;
+    }
+
+    section.about section figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    section {
+
+        margin-top: 0;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    header nav ul {
+        display: none;
+    }
+
+    nav svg {
+        display: block;
+        position: absolute;
+        top: 14px;
+        width: 32px;
+        height: 32px;
+    }
+
+    nav svg:hover,ul:hover {
+        display: block;
+    }
+
+    nav svg:hover,ul:hover li {
+        display: block;
+    }
+
+    main.work > section {
+        display: grid;
+        grid-template-columns: repeat(1,80vw);
+        grid-template-rows: repeat(6,minmax(200px,700px));
+        grid-auto-flow: row;
+        column-gap: 2rem;
+    }
+
+    :root {
+        --maintext-color: #FFF;
+        --subtext-color: #5B8266;
+        --mainBG-color: #1B1B1B;
+        --subBG-color: #2272FF;
+        --normFont-size: 1rem;
+        --BgFont-size: 1.25rem;
+        --extraBgFont-size: 1.5rem;
+
+    }
+
+    section.introduction {
+        min-height: 40vh;
+        display: flex;
+        align-items: top;
+        justify-content: center;
+        margin-top: 25vh;
+    }
+    
+
+    section.introduction section div:last-child h2{
+        text-align: center;
+    }
+
+    main.work section section.upper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    main.work section section.lower {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.about section > div {
+        display:flex;
+        flex-flow: column-reverse nowrap;
+        column-gap: 0.5rem;
+    }
+
+    section.about section figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.about section figure img{
+        height: 100%;
+        width: 300px;
+        object-fit: contain;
+    }
+ 
+    section {
+
+        margin-top: 0;
+    }
+
+    
+}
