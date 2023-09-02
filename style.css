@@ -24,7 +24,7 @@ html {
 
 body {
     background: #1D1D1D;
-    background-image: url('../assets/background/output-onlinepngtools.png');
+    background-image: url('./assets/background/dotty-background.png');
     background-blend-mode: overlay;
     background-size: contain;
     background-position: top;
